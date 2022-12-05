@@ -9,6 +9,6 @@ const GetEventsByCategory = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).sort({$natural:-1})
 })
 module.exports = GetEventsByCategory

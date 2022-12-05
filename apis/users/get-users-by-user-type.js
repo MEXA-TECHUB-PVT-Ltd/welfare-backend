@@ -9,6 +9,6 @@ const GetUsersByUserType = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea')
 })
 module.exports = GetUsersByUserType

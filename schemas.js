@@ -26,10 +26,22 @@ const userSchema = mongoose.Schema({
         type: String,
         enum: ['District', 'Province', 'UC', 'Unit']
     },
-    DistrictArea: String,
-    PPArea: String,
-    UCArea: String,
-    UnitArea: String,
+    DistrictArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'district'
+    },
+    PPArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'pp'
+    },
+    UCArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'uc'
+    },
+    UnitArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'unit'
+    },
     gender: {
         type: String,
         enum: ['Male', 'Female', 'Prefer Not To Specify']
@@ -110,6 +122,18 @@ const MonthlyreportSchema = mongoose.Schema({
     TrainingSession: String,
     created_date: Date
 
+})
+const ppSchema = mongoose.Schema({
+    name: String,
+})
+const ucSchema = mongoose.Schema({
+    name: String,
+})
+const unitSchema = mongoose.Schema({
+    name: String,
+})
+const districtSchema = mongoose.Schema({
+    name: String,
 })
 const departmentSchema = mongoose.Schema({
     departmentName: String,
@@ -207,6 +231,10 @@ const library = mongoose.model('library', librarySchema, 'library')
 
 const eventsModel = mongoose.model('eventSchema', eventSchema, 'events')
 const requestModel = mongoose.model('requestSchema', requestSchema, 'request')
+const districtModel = mongoose.model('district', districtSchema, 'district')
+const ppModel = mongoose.model('pp', ppSchema, 'pp')
+const ucModel = mongoose.model('uc', ucSchema, 'uc')
+const unitModel = mongoose.model('unit', unitSchema, 'unit')
 
 
 module.exports = {
@@ -217,5 +245,9 @@ module.exports = {
     Monthlyreport,
     library,
     eventsModel,
-    requestModel
+    requestModel,
+    districtModel,
+    ppModel,
+    ucModel,
+    unitModel
 }

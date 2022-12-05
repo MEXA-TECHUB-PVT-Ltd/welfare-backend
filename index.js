@@ -86,6 +86,34 @@ app.use('/delete-request', require('./apis/membership-request/delete-request'))
 app.use('/update-approval-status', require('./apis/membership-request/update-approval-status'))
 app.use('/get-approved-requests', require('./apis/membership-request/get-approved-req'))
 app.use('/get-unapproved-requests', require('./apis/membership-request/get-unapprove-req'))
+// District 
+app.use('/create-district', require('./apis/district/create'))
+app.use('/get-district', require('./apis/district/get'))
+app.use('/get-all-district', require('./apis/district/get-all'))
+app.use('/update-district', require('./apis/district/update'))
+app.use('/delete-district', require('./apis/district/delete'))
+// PP 
+app.use('/create-pp', require('./apis/pp/create'))
+app.use('/get-pp', require('./apis/pp/get'))
+app.use('/get-all-pp', require('./apis/pp/get-all'))
+app.use('/update-pp', require('./apis/pp/update'))
+app.use('/delete-pp', require('./apis/pp/delete'))
+// UC 
+app.use('/create-uc', require('./apis/uc/create'))
+app.use('/get-uc', require('./apis/uc/get'))
+app.use('/get-all-uc', require('./apis/uc/get-all'))
+app.use('/update-uc', require('./apis/uc/update'))
+app.use('/delete-uc', require('./apis/uc/delete'))
+// Unit
+app.use('/create-unit', require('./apis/unit/create'))
+app.use('/get-unit', require('./apis/unit/get'))
+app.use('/get-all-unit', require('./apis/unit/get-all'))
+app.use('/update-unit', require('./apis/unit/update'))
+app.use('/delete-unit', require('./apis/unit/delete'))
+
+
+
+
 
 
 app.listen(PORT, () => {

@@ -9,6 +9,6 @@ const GetAllUsers = app.post('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).sort({$natural:-1})
 })
 module.exports = GetAllUsers

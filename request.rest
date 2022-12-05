@@ -1,0 +1,304 @@
+# UserType District 
+POST http://localhost:4000/create-user
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"123",
+    "name": "Fazal",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"Developer",
+    "city":"Islamabad",
+    "userType":"District",
+    "DistrictArea":"DD-1",
+    "gender":"Male",
+    "forum": "MSM",
+    "role":"Executive Member",
+    "department":"Welfare"
+}
+###
+# UserType Province 
+
+POST http://localhost:4000/create-user
+Content-Type: application/json
+
+{
+    "email":"zouqe42@gmail.com",
+    "password":"123456789",
+    "name": "Fazal",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"Developer",
+    "city":"Islamabad",
+    "userType":"Province",
+    "DistrictArea":"DD-1",
+    "PPArea":"PP-1",
+    "gender":"Male",
+    "forum": "MSM",
+    "role":"Executive Member",
+    "department":"Welfare"
+}
+###
+# UserType UC 
+
+POST http://localhost:4000/create-user
+Content-Type: application/json
+
+{
+    "email":"zouqe42@gmail.com",
+    "password":"123456789",
+    "name": "Fazal",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"Developer",
+    "city":"Islamabad",
+    "userType":"UC",
+    "DistrictArea":"DD-1",
+    "PPArea":"PP-1",
+    "UCArea":"UC-1",
+    "gender":"Male",
+    "forum": "MSM",
+    "role":"Executive Member",
+    "department":"Welfare"
+}
+###
+# UserType Unit 
+
+
+POST http://localhost:4000/create-user
+Content-Type: application/json
+
+{
+    "image":"imagelccink",
+    "email":"rim22f@gmail.com",
+    "password":"123456789",
+    "name": "Fazal",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"Dev",
+    "city":"Islamabad",
+    "userType":"Unit",
+    "DistrictArea":"DD-1",
+    "PPArea":"PP-1",
+    "UCArea":"UC-1",
+    "UnitArea":"Unit-1",
+    "gender":"Male",
+    "forum": "MSM",
+    "role":"Executive Member",
+    "department":"Welfare"
+}
+
+###
+DELETE http://localhost:3000/delete-user
+Content-Type: application/json
+
+{
+    "_id":"627cc509dc97a3958822312c"
+}
+
+###
+
+GET http://localhost:4000/get-all-users
+###
+GET http://localhost:4000/get-user?_id=62fcad357ab4cee85bdd0350
+###
+GET http://localhost:3000/get-users-by-department?department=Welfare
+###
+GET http://localhost:3000/get-users-by-forum?forum=MSM
+###
+GET http://localhost:3000/get-users-by-role?role=Executive Member
+###
+GET http://localhost:3000/get-users-by-user-type?userType=District
+###
+PUT http://localhost:3000/update-password
+Content-Type: application/json
+
+{
+    "email":"zouqe42@gmail.com",
+    "password":"123456789"
+}
+### User Type district
+PUT http://localhost:4000/update-user
+Content-Type: application/json
+
+{
+    "_id": "62fe36f165ebd1ae81b25e13",
+    "image":"imagelccink",
+    "profession":"RN-Developer",
+}
+### user Type Province
+PUT http://localhost:3000/update-user
+Content-Type: application/json
+
+{
+    "_id": "627ce30f10dc80c1025f1f56",
+    "name": "Zouqe",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"RN-Developer",
+    "city":"Islamabad",
+    "userType":"Province",
+    "DistrictArea":"DD-1",
+    "PPArea":"PP-1",
+    "gender":"Male",
+    "role":"President",
+    "department":"Welfare"
+}
+### user Type UC
+PUT http://localhost:4000/update-user
+Content-Type: application/json
+
+{
+    "_id": "63061d7ff354dd8ea8ede793",
+    "name": "Zouqe",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"RN-Developer",
+    "city":"Islamabad",
+    "userType":"Province",
+    "DistrictArea":"DD-1",
+    "PPArea":"PP-1",
+    "UCArea":"UC-1",
+    "PPArea":"PP-1",
+    "gender":"Male",
+    "role":"President",
+    "department":"Welfare"
+}
+### user Type Unit
+PUT http://localhost:4000/update-user
+Content-Type: application/json
+
+{
+    "_id": "62fe36f165ebd1ae81b25e13",
+    "name": "Rimsha Riaz",
+    "dob":"2022-05-12T08:25:12.760Z",
+    "profession":"RN-Developer",
+    "city":"Islamabad",
+    "DistrictArea":"DD-1",
+    "PPArea":"PP-1",
+    "UCArea":"UC-1",
+    "UnitArea":"Unit-1",
+    "PPArea":"PP-1",
+    "gender":"Male",
+    "role":"President",
+    "department":"Welfare"
+}
+###
+POST http://localhost:4000/create-event
+Content-Type: application/json
+
+{
+    "images":["image-uploads\\1652768600012.png","image-uploads\\1652768600012.png","image-uploads\\1652768600012.png"],
+    "title":"Some Title",
+    "description":"Some description",
+    "location":"Shamsabad",
+    "date":"2022-05-06T08:25:12.760Z",
+    "time": "2022-05-06T08:25:12.760Z",
+    "category":"Public",
+    "department":"Welfare"
+}
+###
+DELETE http://localhost:3000/delete-event
+Content-Type: application/json
+
+{
+    "_id":"627cd654279ce9fd5e2bfd3e"
+}
+###
+GET http://143.198.122.1:4000/get-all-requests
+###
+GET http://localhost:3000/get-events-by-category?category=Public
+###
+GET http://localhost:4000/get-events-by-date
+###
+GET http://localhost:3000/get-events-by-department?department=Dawa
+###
+PUT http://localhost:3000/update-event
+Content-Type: application/json
+
+{
+    "_id": "627cd7ff642d0f96e4b862fa",
+    "images":["image-uploads\\1652768600012.png","image-uploads\\1652768600012.png","image-uploads\\1652768600012.png"],
+    "title":"Changed Title",
+    "description":"Some description",
+    "location":"Dhok Khabba Rawalpindi",
+    "date":"2022-05-10T08:25:12.760Z",
+    "time": "2022-05-10T08:25:12.760Z",
+    "category":"Public",
+    "department":"Welfare"
+}
+###
+POST http://localhost:4000/create-report
+Content-Type: application/json
+
+{
+    "reportBy": "63107e9085e7bdd8d4dc3fd2",
+    "eventCategory": "Public",
+    "title":"title",
+    "description":"Some Welfare report district description",
+    "location":"location of report",
+    "date":"2022-05-12T08:25:12.760Z",
+    "time":"2022-05-12T08:25:12.760Z",
+    "images":["image-uploads\\1652768600012.png","image-uploads\\1652768600012.png","image-uploads\\1652768600012.png"]
+}
+###
+DELETE http://localhost:3000/delete-report
+Content-Type: application/json
+
+{
+    "_id":"627cddf0221436202582783a"
+}
+###
+GET http://localhost:3000/get-report?_id=627cde3d221436202582783d
+###
+
+GET http://localhost:4000/get-all-report
+###
+GET http://localhost:3000/get-reports-by-category?eventCategory=Public
+###
+GET http://localhost:4000/get-reportCategory-report?ReportCategory=Event
+###
+GET http://localhost:3000/get-reports-by-user?reportBy=627cd2827b3c4c735f4b92f4
+###
+GET http://localhost:4000/get-reports-of-subordinates?userType=Unit&department=Welfare&ReportCategory=Event
+###
+PUT http://localhost:4000/update-report
+Content-Type: application/json
+
+{
+    "_id":"63062062f354dd8ea8ede79d",
+    "title":"Report Title",
+    "department": "Welfare",
+    "userType":"District",
+    "eventCategory": "Private",
+    "description":"Some description",
+    "location":"report loc",
+    "date": "2022-05-06T08:25:12.760Z",
+    "time":"2022-05-06T08:25:12.760Z",
+    "images":["image-uploads\\1652768600012.png", "image-uploads\\1652768600012.png", "image-uploads\\1652768600012.png"]
+}
+###
+POST http://localhost:4000/add-file-in-library
+Content-Type: application/json
+
+{
+    "path":"file-uploads\\1652354493759.pdf",
+    "name":"Some File"
+}
+###
+PUT http://localhost:3000/remove-file-from-library
+Content-Type: application/json
+
+{
+    "_id":"627cef04fed556569b9d855c"
+}
+###
+PUT http://localhost:4000/login-user
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"123"
+}
+###
+PUT http://localhost:3000/logout-user
+Content-Type: application/json
+
+{
+    "_id":"627ce30f10dc80c1025f1f56"
+}

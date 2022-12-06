@@ -9,6 +9,6 @@ const GetUser = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    }).populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea')
+    }).populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea').populate('department')
 })
 module.exports = GetUser

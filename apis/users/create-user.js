@@ -4,7 +4,12 @@ const bcrypt = require('bcrypt')
 const { usersModel } = require('../../schemas')
 
 const CreateUser = app.post('/', (req, res) => {
-    const session = bcrypt.hashSync(Math.floor(Math.random() * 1000).toString(), 12)
+    usersModel.find({email: req.body.email }, (error, result) => {
+        if (error) {
+            res.send(error)
+        } else {
+            if(result.length===0){
+  const session = bcrypt.hashSync(Math.floor(Math.random() * 1000).toString(), 12)
     const hashedPassword = bcrypt.hashSync(req.body.password, 12)
     const userType=req.body.userType;
     if(userType=='District'){
@@ -252,6 +257,15 @@ const CreateUser = app.post('/', (req, res) => {
     }else{
         res.send("Invalid UserType")
     }
+            }else{
+        res.json("Email Already Exists")
+                
+
+            }
+
+  
+}
+    })
    
 })
 module.exports = CreateUser

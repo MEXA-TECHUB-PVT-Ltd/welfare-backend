@@ -11,9 +11,20 @@ const UpdateUser = app.put('/', (req, res) => {
         } else {
             // res.send(result)
             const updateData = {
-                image:req.body.image,
+                email: req.body.email,
+                name: req.body.name,
+                dob: req.body.dob,
                 profession: req.body.profession,
-                role:req.body.role
+                city: req.body.city,
+                userType: req.body.userType,
+                DistrictArea:req.body.DistrictArea,
+                PPArea:req.body.PPArea,
+                UCArea:req.body.UCArea,
+                UnitArea:req.body.UnitArea,
+                gender: req.body.gender,
+                forum: req.body.forum,
+                role: req.body.role,
+                department: req.body.department,
             }
             const options = {
                 new: true

@@ -54,7 +54,10 @@ const userSchema = mongoose.Schema({
         type: String,
         enum: ['Executive Member', 'General Secretary', 'President']
     },
-    department: String,
+    department: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'department'
+    },
     // savedReportId: [{
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'savedReport'

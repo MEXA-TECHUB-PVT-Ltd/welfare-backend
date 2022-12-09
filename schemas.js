@@ -107,10 +107,22 @@ const MonthlyreportSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'department'
     },
-    DistrictArea: String,
-    PPArea: String,
-    UCArea: String,
-    UnitArea: String,
+    DistrictArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'district'
+    },
+    PPArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'pp'
+    },
+    UCArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'uc'
+    },
+    UnitArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'unit'
+    },
     AreaNumber: String,
     userName: String,
     LifeTimeMembersTarget: String,

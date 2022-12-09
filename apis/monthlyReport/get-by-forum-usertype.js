@@ -3,7 +3,7 @@ const app = express()
 const { Monthlyreport } = require('../../schemas')
 
 const GetEventsByCategory = app.get('/', (req, res) => {
-    Monthlyreport.find({ userType: req.query.userType }, (error, result) => {
+    Monthlyreport.find({ userType: req.query.userType,forum: req.query.forum  }, (error, result) => {
         if (error) {
             res.send(error)
         } else {

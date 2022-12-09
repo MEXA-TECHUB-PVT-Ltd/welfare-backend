@@ -67,6 +67,8 @@ app.use('/get-reportData-by-date', require('./apis/reports/get-report-by-date'))
 
 //department api
 app.use('/create-dept', require('./apis/events/create-dept'))
+app.use('/get-dept', require('./apis/events/get-single-dept'))
+
 app.use('/get-all', require('./apis/events/get-all-depts'))
 app.use('/delete-dept', require('./apis/events/delete-dept'))
 

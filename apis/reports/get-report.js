@@ -9,6 +9,6 @@ const GetReport = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).populate('department').populate('reportBy')
 })
 module.exports = GetReport

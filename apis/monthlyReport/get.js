@@ -9,6 +9,6 @@ const GetMonthlyReport = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).populate('department').populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea')
 })
 module.exports = GetMonthlyReport

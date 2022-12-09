@@ -83,6 +83,13 @@ app.use('/get-report-by-forum', require('./apis/monthlyReport/get-by-forum'))
 app.use('/get-report-by-userType', require('./apis/monthlyReport/get-by-userType'))
 app.use('/get-report-by-department', require('./apis/monthlyReport/get-by-department'))
 
+app.use('/get-report-by-dept-usertype', require('./apis/monthlyReport/get-by-dept-usertype'))
+app.use('/get-report-by-forum-dept', require('./apis/monthlyReport/get-by-forum-department'))
+app.use('/get-report-by-forum-dept-usertype', require('./apis/monthlyReport/get-by-forum-dept-usertype'))
+app.use('/get-report-by-forum-usertype', require('./apis/monthlyReport/get-by-forum-usertype'))
+
+
+
 
 // Requests 
 app.use('/create-request', require('./apis/membership-request/create-request'))

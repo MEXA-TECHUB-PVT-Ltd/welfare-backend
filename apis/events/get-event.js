@@ -9,6 +9,6 @@ const GetEvent = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).populate('department')
 })
 module.exports = GetEvent

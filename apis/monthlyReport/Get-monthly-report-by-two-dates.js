@@ -10,7 +10,7 @@ const GetEventsByCategory = app.post('/', (req, res) => {
         } catch (err) {
             res.json(err)
         }
-    }).populate('userId')
+    }).populate('userId').populate('department').populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea')
 
 })
 module.exports = GetEventsByCategory

@@ -83,7 +83,10 @@ const reportSchema = mongoose.Schema({
         type: String,
         enum: ['Public', 'Private']
     },
-    department: String,
+    department: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'department'
+    },
     userType: {
         type: String,
         enum: ['District', 'Province', 'UC', 'Unit']
@@ -107,10 +110,22 @@ const MonthlyreportSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'department'
     },
-    DistrictArea: String,
-    PPArea: String,
-    UCArea: String,
-    UnitArea: String,
+    DistrictArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'district'
+    },
+    PPArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'pp'
+    },
+    UCArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'uc'
+    },
+    UnitArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'unit'
+    },
     AreaNumber: String,
     userName: String,
     LifeTimeMembersTarget: String,
@@ -164,7 +179,10 @@ const eventSchema = mongoose.Schema({
         enum: ['Public', 'Private']
     },
     // createdBy:Strin
-    department: String
+    department:  {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'department'
+    }
 })
 const requestSchema = mongoose.Schema({
     // image: String,

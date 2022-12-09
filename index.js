@@ -77,6 +77,12 @@ app.use('/monthlyReportGetAll', require('./apis/monthlyReport/get-all'))
 app.use('/monthlyReportGet', require('./apis/monthlyReport/get'))
 app.use('/monthlyReportUpdate', require('./apis/monthlyReport/update'))
 app.use('/get-report-by-date', require('./apis/monthlyReport/get-report-by-date'))
+app.use('/get-report-by-userId', require('./apis/monthlyReport/get-monthly-report-by-userId'))
+app.use('/get-report-between-two-dates', require('./apis/monthlyReport/Get-monthly-report-by-two-dates'))
+app.use('/get-report-by-forum', require('./apis/monthlyReport/get-by-forum'))
+app.use('/get-report-by-userType', require('./apis/monthlyReport/get-by-userType'))
+app.use('/get-report-by-department', require('./apis/monthlyReport/get-by-department'))
+
 
 // Requests 
 app.use('/create-request', require('./apis/membership-request/create-request'))

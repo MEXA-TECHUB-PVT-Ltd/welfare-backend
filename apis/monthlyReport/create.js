@@ -9,10 +9,11 @@ const CreateMReport = app.post('/', (req, res) => {
         if (error) {
             res.send(error)
         } else {
-            // res.send(result)
+            // res.send(result.forum)
             const userType = result.userType;
             const userName = result.name;
-
+            const forum = result.forum;
+            const department = result.department;
             if (userType == 'District') {
             const DistrictArea = result.DistrictArea;
 
@@ -21,6 +22,8 @@ const CreateMReport = app.post('/', (req, res) => {
                     userType: userType,
                     DistrictArea: DistrictArea,
                     userName:userName,
+                    forum:forum,
+                    department:department,
                     AreaNumber:req.body.AreaNumber,
                     LifeTimeMembersTarget: req.body.LifeTimeMembersTarget,
                     LifeTimeMembersAchieved: req.body.LifeTimeMembersAchieved,
@@ -59,6 +62,8 @@ const CreateMReport = app.post('/', (req, res) => {
                     DistrictArea: DistrictArea,
                     PPArea: PPArea,
                     userName:userName,
+                    forum:forum,
+                    department:department,
                     AreaNumber:req.body.AreaNumber,
                     LifeTimeMembersTarget: req.body.LifeTimeMembersTarget,
                     LifeTimeMembersAchieved: req.body.LifeTimeMembersAchieved,
@@ -100,6 +105,8 @@ const CreateMReport = app.post('/', (req, res) => {
                     PPArea: PPArea,
                     UCArea: UCArea,
                     userName:userName,
+                    forum:forum,
+                    department:department,
                     AreaNumber:req.body.AreaNumber,
                     LifeTimeMembersTarget: req.body.LifeTimeMembersTarget,
                     LifeTimeMembersAchieved: req.body.LifeTimeMembersAchieved,
@@ -143,6 +150,8 @@ const CreateMReport = app.post('/', (req, res) => {
                     UCArea: UCArea,
                     UnitArea:UnitArea,
                     userName:userName,
+                    forum:forum,
+                    department:department,
                     AreaNumber:req.body.AreaNumber,
                     LifeTimeMembersTarget: req.body.LifeTimeMembersTarget,
                     LifeTimeMembersAchieved: req.body.LifeTimeMembersAchieved,

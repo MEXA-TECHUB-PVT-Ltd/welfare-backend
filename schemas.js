@@ -97,8 +97,16 @@ const reportSchema = mongoose.Schema({
     images: [String],
 })
 const MonthlyreportSchema = mongoose.Schema({
-    userId: String,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'userSchema'
+    },
     userType: String,
+    forum:String,
+    department: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'department'
+    },
     DistrictArea: String,
     PPArea: String,
     UCArea: String,

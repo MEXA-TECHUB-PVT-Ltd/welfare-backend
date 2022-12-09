@@ -9,6 +9,6 @@ const GetAllUsers = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    }).sort({$natural:-1}).populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea')
+    }).sort({$natural:-1}).populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea').populate('department')
 })
 module.exports = GetAllUsers

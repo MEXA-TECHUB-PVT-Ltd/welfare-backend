@@ -9,6 +9,6 @@ const GetEventsByCategory = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    })
+    }).populate('department').populate('reportBy')
 })
 module.exports = GetEventsByCategory

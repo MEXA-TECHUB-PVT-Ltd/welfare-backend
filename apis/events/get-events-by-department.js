@@ -9,6 +9,6 @@ const GetEventsByDepartment = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    }).sort({ date: -1 })
+    }).sort({ date: -1 }).populate('department')
 })
 module.exports = GetEventsByDepartment

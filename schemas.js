@@ -83,7 +83,10 @@ const reportSchema = mongoose.Schema({
         type: String,
         enum: ['Public', 'Private']
     },
-    department: String,
+    department: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'department'
+    },
     userType: {
         type: String,
         enum: ['District', 'Province', 'UC', 'Unit']
@@ -176,7 +179,10 @@ const eventSchema = mongoose.Schema({
         enum: ['Public', 'Private']
     },
     // createdBy:Strin
-    department: String
+    department:  {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'department'
+    }
 })
 const requestSchema = mongoose.Schema({
     // image: String,

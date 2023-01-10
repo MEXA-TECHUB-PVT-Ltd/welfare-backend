@@ -9,6 +9,6 @@ const GetEventsByCategory = app.get('/', (req, res) => {
         } else {
             res.send(result)
         }
-    }).sort({$natural:-1})
+    }).sort({$natural:-1}).populate('DistrictArea').populate('PPArea').populate('UCArea').populate('UnitArea')
 })
 module.exports = GetEventsByCategory

@@ -128,7 +128,13 @@ app.use('/delete-unit', require('./apis/unit/delete'))
 
 // Requests Uc Group
 app.use('/create-group-req', require('./apis/Uc_Groups_request/create-request'))
-
+app.use('/get-all-group-requests', require('./apis/Uc_Groups_request/get-all'))
+app.use('/get-group-request', require('./apis/Uc_Groups_request/get-request'))
+app.use('/delete-group-request', require('./apis/Uc_Groups_request/delete-request'))
+app.use('/update-group-approval-status', require('./apis/Uc_Groups_request/update-approval-status'))
+app.use('/get-group-approved-requests', require('./apis/Uc_Groups_request/get-approved-req'))
+app.use('/get-group-unapproved-requests', require('./apis/Uc_Groups_request/get-unapprove-req'))
+// District 
 
 
 

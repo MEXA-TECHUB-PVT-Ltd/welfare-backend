@@ -134,7 +134,17 @@ app.use('/delete-group-request', require('./apis/Uc_Groups_request/delete-reques
 app.use('/update-group-approval-status', require('./apis/Uc_Groups_request/update-approval-status'))
 app.use('/get-group-approved-requests', require('./apis/Uc_Groups_request/get-approved-req'))
 app.use('/get-group-unapproved-requests', require('./apis/Uc_Groups_request/get-unapprove-req'))
-// District 
+// Uc Group Users  
+app.use('/create-Uc-User-Group', require('./apis/UcGroupUsers/create-user'))
+app.use('/get-all-Uc-User-Group', require('./apis/UcGroupUsers/get-all-users'))
+app.use('/get-Uc-User-Group', require('./apis/UcGroupUsers/get-user'))
+app.use('/delete-Uc-User-Group', require('./apis/UcGroupUsers/delete-user'))
+app.use('/update-Uc-User-Group', require('./apis/UcGroupUsers/update-user'))
+
+
+
+
+
 
 
 

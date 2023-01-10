@@ -288,6 +288,41 @@ const UcGroupsrequestSchema = mongoose.Schema({
     ApprovedStatus:Boolean
 })
 
+const userUcGroupSchema = mongoose.Schema({
+    userType: {
+        type: String,
+        enum: ['District', 'Province', 'UC', 'Unit']
+    },
+    DistrictArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'district'
+    },
+    PPArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'pp'
+    },
+    UCArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'uc'
+    },
+    name: String,
+    fatherName: String,
+    educationalQualification: String,
+    RafaqatNo:String,
+    address:String,
+    profession: String,
+    mobileWhatsapNo:String,
+    email:String,
+    GroupRoles: {
+        type: String,
+        enum: ['صد ر', 'ناظم', 'ناظم دعوت', 'ناظم تربیت', 'ناظم ممبرشپ', 'ناظم مالیات','ناظم سوشل میڈیا']
+    },
+    DateOfForm:String,
+    nameAndSignature: String,
+    ApprovedStatus:Boolean
+
+})
+
 const adminModel = mongoose.model('adminSchema', adminSchema, 'admin')
 const usersModel = mongoose.model('userSchema', userSchema, 'users')
 const reportsModel = mongoose.model('reportSchema', reportSchema, 'reports')
@@ -302,6 +337,7 @@ const ppModel = mongoose.model('pp', ppSchema, 'pp')
 const ucModel = mongoose.model('uc', ucSchema, 'uc')
 const unitModel = mongoose.model('unit', unitSchema, 'unit')
 const UcGroupsrequestModel = mongoose.model('UcGroupsrequest', UcGroupsrequestSchema, 'UcGroupsrequest')
+const userUcGroupModel = mongoose.model('userUcGroup', userUcGroupSchema, 'userUcGroup')
 
 
 module.exports = {
@@ -317,5 +353,6 @@ module.exports = {
     ppModel,
     ucModel,
     unitModel,
-    UcGroupsrequestModel
+    UcGroupsrequestModel,
+    userUcGroupModel
 }

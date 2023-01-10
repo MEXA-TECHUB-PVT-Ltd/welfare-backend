@@ -4,11 +4,10 @@ const { UcGroupsrequestModel } = require('../../schemas')
 
 const CreateUcGroupReq = app.post('/', (req, res) => {
     const UcGroupReq = new UcGroupsrequestModel({
-        userType:req.body.userType,
+        userType:'UC',
         DistrictArea:req.body.DistrictArea,
         PPArea:req.body.PPArea,
         UCArea:req.body.UCArea,
-        UnitArea:req.body.UnitArea,
         name:req.body.name,
         fatherName:req.body.fatherName,
         educationalQualification:req.body.educationalQualification,

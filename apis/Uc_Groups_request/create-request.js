@@ -19,7 +19,8 @@ const CreateUcGroupReq = app.post('/', (req, res) => {
         email:req.body.email,
         GroupRoles:req.body.GroupRoles,
         DateOfForm:req.body.DateOfForm,
-        nameAndSignature:req.body.nameAndSignature
+        nameAndSignature:req.body.nameAndSignature,
+        ApprovedStatus:false
 
     })
     UcGroupReq.save((error, result) => {

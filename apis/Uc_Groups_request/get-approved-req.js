@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const { requestModel } = require('../../schemas')
+const { UcGroupsrequestModel } = require('../../schemas')
 
 const GetEventsByCategory = app.get('/', (req, res) => {
-    requestModel.find({ approvalStatus: 'true' }, (error, result) => {
+    UcGroupsrequestModel.find({ ApprovedStatus: 'true' }, (error, result) => {
         if (error) {
             res.send(error)
         } else {

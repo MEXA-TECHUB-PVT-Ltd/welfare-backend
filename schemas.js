@@ -284,7 +284,8 @@ const UcGroupsrequestSchema = mongoose.Schema({
         enum: ['صد ر', 'ناظم', 'ناظم دعوت', 'ناظم تربیت', 'ناظم ممبرشپ', 'ناظم مالیات','ناظم سوشل میڈیا']
     },
     DateOfForm:String,
-    nameAndSignature: String
+    nameAndSignature: String,
+    ApprovedStatus:Boolean
 })
 
 const adminModel = mongoose.model('adminSchema', adminSchema, 'admin')

@@ -105,7 +105,7 @@ const MonthlyreportSchema = mongoose.Schema({
         ref: 'userSchema'
     },
     userType: String,
-    forum:String,
+    forum: String,
     department: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'department'
@@ -179,7 +179,7 @@ const eventSchema = mongoose.Schema({
         enum: ['Public', 'Private']
     },
     // createdBy:Strin
-    department:  {
+    department: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'department'
     }
@@ -226,9 +226,9 @@ const requestSchema = mongoose.Schema({
     },
     OrganizationName: String,
     Responsibility: String,
-    DesiredMagzine:  {
+    DesiredMagzine: {
         type: String,
-        enum: ['Monthly Minhaj-ul-Quran', 'Monthly Dukhtran-e-Islam','Nothing']
+        enum: ['Monthly Minhaj-ul-Quran', 'Monthly Dukhtran-e-Islam', 'Nothing']
     },
     BloodGroup: String,
 
@@ -244,7 +244,7 @@ const requestSchema = mongoose.Schema({
             'Life Membership without Mag',
             'Memorial Rafaqat']
     },
-    DateOfForm:String,
+    DateOfForm: String,
 
 
 
@@ -271,21 +271,40 @@ const UcGroupsrequestSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'unit'
     },
-    name: String,
-    fatherName: String,
-    educationalQualification: String,
-    RafaqatNo:String,
-    address:String,
-    profession: String,
-    mobileWhatsapNo:String,
-    email:String,
-    GroupRoles: {
-        type: String,
-        enum: ['صد ر', 'ناظم', 'ناظم دعوت', 'ناظم تربیت', 'ناظم ممبرشپ', 'ناظم مالیات','ناظم سوشل میڈیا']
-    },
-    DateOfForm:String,
+    "صد ر":Array,
+    // [{
+    //     Sname: String,
+    //     fatherName: String,
+    //     educationalQualification: String,
+    //     RafaqatNo: String,
+    //     address: String,
+    //     profession: String,
+    //     mobileWhatsapNo: String,
+    //     email: String,
+    // }],
+
+    'ناظم': Array,
+    'ناظم دعوت': Array,
+    'ناظم تربیت': Array,
+    'ناظم ممبرشپ': Array,
+    'ناظم مالیات': Array,
+    'ناظم سوشل میڈیا': Array,
+
+    // name: String,
+    // fatherName: String,
+    // educationalQualification: String,
+    // RafaqatNo:String,
+    // address:String,
+    // profession: String,
+    // mobileWhatsapNo:String,
+    // email:String,
+    // GroupRoles: {
+    //     type: String,
+    //     enum: ['صد ر', 'ناظم', 'ناظم دعوت', 'ناظم تربیت', 'ناظم ممبرشپ', 'ناظم مالیات', 'ناظم سوشل میڈیا']
+    // },
+    DateOfForm: String,
     nameAndSignature: String,
-    ApprovedStatus:Boolean
+    ApprovedStatus: Boolean
 })
 
 const userUcGroupSchema = mongoose.Schema({
@@ -305,21 +324,20 @@ const userUcGroupSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'uc'
     },
-    name: String,
-    fatherName: String,
-    educationalQualification: String,
-    RafaqatNo:String,
-    address:String,
-    profession: String,
-    mobileWhatsapNo:String,
-    email:String,
-    GroupRoles: {
-        type: String,
-        enum: ['صد ر', 'ناظم', 'ناظم دعوت', 'ناظم تربیت', 'ناظم ممبرشپ', 'ناظم مالیات','ناظم سوشل میڈیا']
+    UnitArea: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'unit'
     },
-    DateOfForm:String,
+    "صد ر":Array,
+    'ناظم': Array,
+    'ناظم دعوت': Array,
+    'ناظم تربیت': Array,
+    'ناظم ممبرشپ': Array,
+    'ناظم مالیات': Array,
+    'ناظم سوشل میڈیا': Array,
+    DateOfForm: String,
     nameAndSignature: String,
-    ApprovedStatus:Boolean
+    ApprovedStatus: Boolean
 
 })
 

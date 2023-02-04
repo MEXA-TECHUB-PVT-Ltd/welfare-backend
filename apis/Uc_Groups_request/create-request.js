@@ -3,13 +3,15 @@ const app = express()
 const { UcGroupsrequestModel } = require('../../schemas')
 
 const CreateUcGroupReq = app.post('/', (req, res) => {
-   
+    let refNo = Math.floor((Math.random() * 1000000) + 1);
     const UcGroupReq = new UcGroupsrequestModel({
-        userType: 'UC',
+        ref_no:refNo,
+        userType: req.body.userType,
         DistrictArea: req.body.DistrictArea,
         PPArea: req.body.PPArea,
         UCArea: req.body.UCArea,
-        "صد ر": {
+        UnitArea: req.body.UnitArea,
+        "صدر": {
             name: req.body.Sname,
             fatherName: req.body.SfatherName,
             educationalQualification: req.body.SeducationalQualification,
@@ -31,7 +33,7 @@ const CreateUcGroupReq = app.post('/', (req, res) => {
                 email: req.body.Nemail
             }
         ],
-        'ناظم دعوت': [{
+        'ناظمدعوت': [{
             name: req.body.NDname,
             fatherName: req.body.NDfatherName,
             educationalQualification: req.body.NDeducationalQualification,
@@ -41,7 +43,7 @@ const CreateUcGroupReq = app.post('/', (req, res) => {
             mobileWhatsapNo: req.body.NDmobileWhatsapNo,
             email: req.body.NDemail
         }],
-        'ناظم تربیت': [
+        'ناظمتربیت': [
             {
                 name: req.body.NTname,
                 fatherName: req.body.NTfatherName,
@@ -53,7 +55,7 @@ const CreateUcGroupReq = app.post('/', (req, res) => {
                 email: req.body.NTemail
             }
         ],
-        'ناظم ممبرشپ': [
+        'ناظمممبرشپ': [
             {
                 name: req.body.NMname,
                 fatherName: req.body.NMfatherName,
@@ -65,7 +67,7 @@ const CreateUcGroupReq = app.post('/', (req, res) => {
                 email: req.body.NMemail
             }
         ],
-        'ناظم مالیات': [
+        'ناظممالیات': [
             {
                 name: req.body.NMAname,
                 fatherName: req.body.NMAfatherName,
@@ -77,7 +79,7 @@ const CreateUcGroupReq = app.post('/', (req, res) => {
                 email: req.body.NMAemail
             }
         ],
-        'ناظم سوشل میڈیا': [{
+        'ناظمسوشلمیڈیا': [{
             name: req.body.NSMname,
             fatherName: req.body.NSMfatherName,
             educationalQualification: req.body.NSMeducationalQualification,

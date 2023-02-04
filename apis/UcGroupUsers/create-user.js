@@ -4,26 +4,13 @@ const { userUcGroupModel } = require('../../schemas')
 
 const CreateUser = app.post('/', (req, res) => {
     const UcGroupUser = new userUcGroupModel({
-        // userType:'UC',
-        // DistrictArea:req.body.DistrictArea,
-        // PPArea:req.body.PPArea,
-        // UCArea:req.body.UCArea,
-        // name:req.body.name,
-        // fatherName:req.body.fatherName,
-        // educationalQualification:req.body.educationalQualification,
-        // RafaqatNo:req.body.RafaqatNo,
-        // address:req.body.address,
-        // profession:req.body.profession,
-        // mobileWhatsapNo:req.body.mobileWhatsapNo,
-        // email:req.body.email,
-        // GroupRoles:req.body.GroupRoles,
-        // DateOfForm:req.body.DateOfForm,
-        // nameAndSignature:req.body.nameAndSignature,
-        userType: 'UC',
+        ref_no:req.body.ref_no,
+        userType: req.body.userType,
         DistrictArea: req.body.DistrictArea,
         PPArea: req.body.PPArea,
         UCArea: req.body.UCArea,
-        "صد ر": {
+        UnitArea: req.body.UnitArea,
+        "صدر": {
             name: req.body.Sname,
             fatherName: req.body.SfatherName,
             educationalQualification: req.body.SeducationalQualification,
@@ -45,7 +32,7 @@ const CreateUser = app.post('/', (req, res) => {
                 email: req.body.Nemail
             }
         ],
-        'ناظم دعوت': [{
+        'ناظمدعوت': [{
             name: req.body.NDname,
             fatherName: req.body.NDfatherName,
             educationalQualification: req.body.NDeducationalQualification,
@@ -55,7 +42,7 @@ const CreateUser = app.post('/', (req, res) => {
             mobileWhatsapNo: req.body.NDmobileWhatsapNo,
             email: req.body.NDemail
         }],
-        'ناظم تربیت': [
+        'ناظمتربیت': [
             {
                 name: req.body.NTname,
                 fatherName: req.body.NTfatherName,
@@ -67,7 +54,7 @@ const CreateUser = app.post('/', (req, res) => {
                 email: req.body.NTemail
             }
         ],
-        'ناظم ممبرشپ': [
+        'ناظمممبرشپ': [
             {
                 name: req.body.NMname,
                 fatherName: req.body.NMfatherName,
@@ -79,7 +66,7 @@ const CreateUser = app.post('/', (req, res) => {
                 email: req.body.NMemail
             }
         ],
-        'ناظم مالیات': [
+        'ناظممالیات': [
             {
                 name: req.body.NMAname,
                 fatherName: req.body.NMAfatherName,
@@ -91,7 +78,7 @@ const CreateUser = app.post('/', (req, res) => {
                 email: req.body.NMAemail
             }
         ],
-        'ناظم سوشل میڈیا': [{
+        'ناظمسوشلمیڈیا': [{
             name: req.body.NSMname,
             fatherName: req.body.NSMfatherName,
             educationalQualification: req.body.NSMeducationalQualification,

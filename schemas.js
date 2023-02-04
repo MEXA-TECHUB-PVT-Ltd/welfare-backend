@@ -251,6 +251,7 @@ const requestSchema = mongoose.Schema({
     approvalStatus: Boolean
 })
 const UcGroupsrequestSchema = mongoose.Schema({
+    ref_no:String,
     userType: {
         type: String,
         enum: ['District', 'Province', 'UC', 'Unit']
@@ -271,7 +272,7 @@ const UcGroupsrequestSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'unit'
     },
-    "صد ر":Array,
+    "صدر":Array,
     // [{
     //     Sname: String,
     //     fatherName: String,
@@ -284,11 +285,11 @@ const UcGroupsrequestSchema = mongoose.Schema({
     // }],
 
     'ناظم': Array,
-    'ناظم دعوت': Array,
-    'ناظم تربیت': Array,
-    'ناظم ممبرشپ': Array,
-    'ناظم مالیات': Array,
-    'ناظم سوشل میڈیا': Array,
+    'ناظمدعوت': Array,
+    'ناظمتربیت': Array,
+    'ناظمممبرشپ': Array,
+    'ناظممالیات': Array,
+    'ناظمسوشلمیڈیا': Array,
 
     // name: String,
     // fatherName: String,
@@ -308,6 +309,7 @@ const UcGroupsrequestSchema = mongoose.Schema({
 })
 
 const userUcGroupSchema = mongoose.Schema({
+    ref_no:String,
     userType: {
         type: String,
         enum: ['District', 'Province', 'UC', 'Unit']
@@ -328,13 +330,13 @@ const userUcGroupSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'unit'
     },
-    "صد ر":Array,
+    "صدر":Array,
     'ناظم': Array,
-    'ناظم دعوت': Array,
-    'ناظم تربیت': Array,
-    'ناظم ممبرشپ': Array,
-    'ناظم مالیات': Array,
-    'ناظم سوشل میڈیا': Array,
+    'ناظمدعوت': Array,
+    'ناظمتربیت': Array,
+    'ناظمممبرشپ': Array,
+    'ناظممالیات': Array,
+    'ناظمسوشلمیڈیا': Array,
     DateOfForm: String,
     nameAndSignature: String,
     ApprovedStatus: Boolean

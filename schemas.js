@@ -245,9 +245,6 @@ const requestSchema = mongoose.Schema({
             'Memorial Rafaqat']
     },
     DateOfForm: String,
-
-
-
     approvalStatus: Boolean
 })
 const UcGroupsrequestSchema = mongoose.Schema({
@@ -272,37 +269,20 @@ const UcGroupsrequestSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'unit'
     },
-    "صدر":Array,
-    // [{
-    //     Sname: String,
-    //     fatherName: String,
-    //     educationalQualification: String,
-    //     RafaqatNo: String,
-    //     address: String,
-    //     profession: String,
-    //     mobileWhatsapNo: String,
-    //     email: String,
-    // }],
-
-    'ناظم': Array,
-    'ناظمدعوت': Array,
-    'ناظمتربیت': Array,
-    'ناظمممبرشپ': Array,
-    'ناظممالیات': Array,
-    'ناظمسوشلمیڈیا': Array,
-
-    // name: String,
-    // fatherName: String,
-    // educationalQualification: String,
-    // RafaqatNo:String,
-    // address:String,
-    // profession: String,
-    // mobileWhatsapNo:String,
-    // email:String,
-    // GroupRoles: {
-    //     type: String,
-    //     enum: ['صد ر', 'ناظم', 'ناظم دعوت', 'ناظم تربیت', 'ناظم ممبرشپ', 'ناظم مالیات', 'ناظم سوشل میڈیا']
-    // },
+    // "صدر":Array,
+    // 'ناظم': Array,
+    // 'ناظمدعوت': Array,
+    // 'ناظمتربیت': Array,
+    // 'ناظمممبرشپ': Array,
+    // 'ناظممالیات': Array,
+    // 'ناظمسوشلمیڈیا': Array,
+    saddar:Array,
+    nazim:Array,
+    nazim_dawat:Array,
+    nazim_tarbiat:Array,
+    nazim_membership:Array,
+    nazim_maliaat:Array,
+    nazim_social_media:Array,
     DateOfForm: String,
     nameAndSignature: String,
     ApprovedStatus: Boolean
@@ -330,13 +310,20 @@ const userUcGroupSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'unit'
     },
-    "صدر":Array,
-    'ناظم': Array,
-    'ناظمدعوت': Array,
-    'ناظمتربیت': Array,
-    'ناظمممبرشپ': Array,
-    'ناظممالیات': Array,
-    'ناظمسوشلمیڈیا': Array,
+    saddar:Array,
+    nazim:Array,
+    nazim_dawat:Array,
+    nazim_tarbiat:Array,
+    nazim_membership:Array,
+    nazim_maliaat:Array,
+    nazim_social_media:Array,
+    // "صدر":Array,
+    // 'ناظم': Array,
+    // 'ناظمدعوت': Array,
+    // 'ناظمتربیت': Array,
+    // 'ناظمممبرشپ': Array,
+    // 'ناظممالیات': Array,
+    // 'ناظمسوشلمیڈیا': Array,
     DateOfForm: String,
     nameAndSignature: String,
     ApprovedStatus: Boolean
